@@ -4,81 +4,8 @@
         <meta charset="utf-8">
         <title>Numair Dubsa</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style type="text/css">
-
-        /* reset */
-        html, body, div {
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* fonts */
-        body {
-            font-family: "Times New Roman", Times, serif;
-        }
-
-        .title {
-            font-weight: bold;
-        }
-
-        .description {
-            font-style: italic;
-        }
-
-
-        /* sizing */
-        body {
-            line-height: 1.6;
-            font-size: 20px;
-        }
-
-        h1, h2, h3 {
-            margin-top: 30px;
-            line-height: 1.2;
-        }
-
-        .description {
-            line-height: 1.4;
-            font-size: 89%;
-        }
-
-        .bio {
-            line-height: 1.25;
-        }
-
-            /*
-           .wrapper {
-               background-color: #eff;
-           }
-           .sidebar {
-               background-color: #efe;
-           }
-           .main {
-               background-color: #eef;
-           } */
-
-        /* columns */
-
-        .wrapper {
-            margin: auto;
-            max-width: 1000px;
-            padding: 0 30px;
-        }
-
-        @media screen and (min-width: 750px) {
-            .sidebar { float: right; width: 250px; }
-            .main { margin-right: 270px; }
-        }
-
-        .avatar {
-            width: 250px;
-        }
-
-        </style>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="wrapper">
@@ -86,53 +13,57 @@
             <div class="sidebar">
                 <img class="avatar" src="assets/avatar.jpg" />
                 <p class="bio">
-                    Student<br>
-                    University of Pittsburgh
+                    <i class="fa fa-graduation-cap" style="font-size:20px;"></i>
+                    Computer Science<br>
+                    <i class="fa fa-university" style="font-size:20px;"></i>
+                    <i>University of Pittsburgh</i>
                 </p>
                 <p>
+                    <i class="fa fa-github-square" style="font-size:20px;"></i>
                     <a href="https://github.com/Newchair2644">GitHub</a><br>
+                    <i class="fa fa-linkedin-square" style="font-size:20px;"></i>
                     <a href="https://www.linkedin.com/in/numair-dubas">LinkedIn</a><br>
+                    <i class="fa fa-pencil-square" style="font-size:20px;"></i>
                     <a href="assets/cv.pdf">CV</a>
                 </p>
-                <img src="assets/nsbest.gif" />
             </div>
             <div class="main">
                 <h2>Projects</h2>
-                <p><span class="title"><a href="https://github.com/ludocode/onramp">Onramp</a></span><br>
-                <span class="description">A portable self-bootstrapping C compiler</span>
+                <p><span class="title"><a href="https://github.com/Newchair2644/onramp">YOLOv4 Custom Model</a></span><br>
+                <span class="description">Rat tracker based on a custom trained YOLOv4 model intended to mitigate the spread of disease</span>
                 </p>
 
-                <p><span class="title"><a href="https://github.com/ludocode/ghost">Ghost</a></span><br>
-                <span class="description">A portability and boilerplate library for C ("Boost for C")</span>
+                <p><span class="title"><a href="https://github.com/Newchair2644/The-Adventures-of-RB">The Adventures of R&B</a></span><br>
+                <span class="description">Two player physics-based puzzle game made in Godot 3.5</span>
                 </p>
 
-                <p><span class="title"><a href="https://github.com/ludocode/pottery">Pottery</a></span><br>
-                <span class="description">A header-only container and algorithm template library in C</span>
+                <p><span class="title"><a href="https://github.com/Newchair2644/void-packages">Void Linux Package Maintainer</a></span><br>
+                <span class="description">Currently maintaing a few package templates for Void Linux</span>
                 </p>
 
-                <p><span class="title"><a href="https://github.com/ludocode/mpack">MPack</a></span><br>
-                <span class="description">A MessagePack serialization library in C</span>
+                <p><span class="title"><a href="https://github.com/Newchair2644/coreutils">Coreutils</a></span><br>
+                <span class="description">Unix core utilities implemented from scratch in "modern" C99.</span>
                 </p>
 
-                <p><span class="title"><a href="https://github.com/ludocode/msgpack-tools">msgpack-tools</a></span><br>
-                <span class="description">Command-line tools for converting between MessagePack and JSON</span>
+                <p><span class="title"><a href="https://github.com/Newchair2644/dotfiles">Dotfiles</a></span><br>
+                <span class="description">My GNU/Linux dotfiles :D</span>
                 </p>
-
-                <p><span class="title"><a href="https://github.com/ludocode/clayfish">Clayfish</a></span><br>
-                <span class="description">A toy chess engine in C using Pottery containers and algorithms</span>
-                </p>
-
-
-
-                <!--
-                <h2>Blog</h2>
-                <p><span class="title"><a href="blog/flatpak-is-not-the-future">Flatpak Is Not the Future</a></span></p>
-                <p><span class="title"><a href="blog/diceware-is-slightly-overrated">Diceware is (slightly) overrated</a></span></p>
-                <p><span class="title"><a href="blog/arch-rpi-headless">Setting up a Headless Raspberry Pi with Arch Linux ARM</a></span></p>
-                <p><span class="title"><a href="blog/tricks-single-card-round-calculator">Tricks Single Card Round Calculator</a></span></p>
-                -->
             </div>
         </div>
     </body>
+    <footer>
+        <div>
+            <span class="copyright">&copy; Numair Dubas 2024</span>
+            <a rel="license noopener noreferrer" href="./LICENSE">LICENSE (GPL-v3)</a>
+            <span class="mobile-hide">/</span>
+            <a href="./atom.xml">Feed (atom)</a>
+        </div>
+        <div>
+            <a rel="me noopener noreferrer" href="https://tilde.zone/@Newchair">Mastodon</a>
+            <span class="mobile-hide">/</span>
+            <a href="mailto: Numair2644@proton.me" rel="noopener noreferrer">Contact</a>
+            <span class="mobile-hide">/</span>
+            <a href="assets/public-key.asc" rel="noopener noreferrer">PGP Public Key</a>
+        </div>
+    </footer>
 </html>
-
