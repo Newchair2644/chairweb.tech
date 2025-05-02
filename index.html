@@ -1,69 +1,420 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Numair Dubas</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <h1>Numair Dubas</h1>
-            <div class="sidebar">
-                <img class="avatar" src="assets/avatar.jpg" />
-                <p class="bio">
-                    <i class="fa fa-graduation-cap" style="font-size:20px;"></i>
-                    Computer Science<br>
-                    <i class="fa fa-university" style="font-size:20px;"></i>
-                    <i>University of Pittsburgh</i>
-                </p>
-                <p>
-                    <i class="fa fa-github-square" style="font-size:20px;"></i>
-                    <a href="https://github.com/Newchair2644">GitHub</a><br>
-                    <i class="fa fa-linkedin-square" style="font-size:20px;"></i>
-                    <a href="https://www.linkedin.com/in/numair-dubas">LinkedIn</a><br>
-                    <i class="fa fa-pencil-square" style="font-size:20px;"></i>
-                    <a href="assets/cv.pdf">CV</a>
-                </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numair Dubas | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+        :root {
+            --primary: #3b82f6;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+        }
+
+        .card {
+            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .avatar {
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: var(--primary);
+        }
+
+        .typewriter {
+            border-right: 3px solid var(--primary);
+            animation: blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary); }
+        }
+
+        .glow {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2 gradient-text">Numair Dubas</h1>
+                <div class="typewriter text-xl md:text-2xl text-blue-400">
+                    Computer Engineering @ Pitt
+                </div>
             </div>
-            <div class="main">
-                <h2>Projects</h2>
-                <p><span class="title"><a href="https://github.com/Newchair2644/onramp">YOLOv4 Custom Model</a></span><br>
-                <span class="description">Rat tracker based on a custom trained YOLOv4 model intended to mitigate the spread of disease</span>
-                </p>
 
-                <p><span class="title"><a href="https://github.com/Newchair2644/The-Adventures-of-RB">The Adventures of R&B</a></span><br>
-                <span class="description">Two player physics-based puzzle game made in Godot 3.5</span>
-                </p>
+            <div class="flex space-x-4">
+                <a href="https://github.com/Newchair2644" target="_blank" class="social-icon text-3xl text-gray-300 hover:text-blue-400">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/numair-dubas" target="_blank" class="social-icon text-3xl text-gray-300 hover:text-blue-400">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:Numair2644@proton.me" class="social-icon text-3xl text-gray-300 hover:text-blue-400">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="assets/cv.pdf" class="social-icon text-3xl text-gray-300 hover:text-blue-400">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+            </div>
+        </header>
 
-                <p><span class="title"><a href="https://github.com/Newchair2644/void-packages">Void Linux Package Maintainer</a></span><br>
-                <span class="description">Currently maintaing a few package templates for Void Linux</span>
-                </p>
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Profile Section -->
+            <div class="lg:col-span-1">
+                <div class="card rounded-xl p-6 h-full">
+                    <div class="flex flex-col items-center">
+                        <img src="assets/avatar.jpg" alt="Numair Dubas" class="avatar w-40 h-40 rounded-full mb-6 object-cover">
 
-                <p><span class="title"><a href="https://github.com/Newchair2644/coreutils">Coreutils</a></span><br>
-                <span class="description">Unix core utilities implemented from scratch in "modern" C99.</span>
-                </p>
+                        <div class="text-center mb-6">
+                            <div class="flex items-center justify-center mb-2">
+                                <i class="fas fa-graduation-cap text-blue-400 mr-2"></i>
+                                <span class="font-bold">Computer Science</span>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-university text-blue-400 mr-2"></i>
+                                <span class="italic">University of Pittsburgh</span>
+                            </div>
+                        </div>
 
-                <p><span class="title"><a href="https://github.com/Newchair2644/dotfiles">Dotfiles</a></span><br>
-                <span class="description">My GNU/Linux dotfiles :D</span>
-                </p>
+                        <div class="w-full">
+                            <h3 class="text-xl font-bold mb-4 text-center border-b border-blue-400 pb-2">Quick Links</h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="assets/public-key.asc" class="flex items-center hover:text-blue-400 transition">
+                                        <i class="fas fa-key mr-3"></i>
+                                        PGP Public Key
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://tilde.zone/@Newchair" class="flex items-center hover:text-blue-400 transition">
+                                        <i class="fab fa-mastodon mr-3"></i>
+                                        Mastodon
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./atom.xml" class="flex items-center hover:text-blue-400 transition">
+                                        <i class="fas fa-rss mr-3"></i>
+                                        RSS Feed
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="lg:col-span-2">
+                <div class="card rounded-xl p-6">
+                    <h2 class="text-3xl font-bold mb-6 glow">Featured Projects</h2>
+
+                    <div class="space-y-6">
+                        <!-- Project 1 -->
+                        <div class="project-card group">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-400 transition">
+                                        <a href="https://github.com/Newchair2644/onramp" target="_blank" class="flex items-center">
+                                            YOLOv4 Custom Model
+                                            <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-300 mb-3">Rat tracker based on a custom trained YOLOv4 model intended to mitigate the spread of disease</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded text-xs">Computer Vision</span>
+                                        <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded text-xs">YOLOv4</span>
+                                        <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded text-xs">Python</span>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4 flex items-center justify-end mt-4 md:mt-0">
+                                    <div class="w-16 h-16 bg-blue-400/10 rounded-full flex items-center justify-center group-hover:bg-blue-400/20 transition">
+                                        <i class="fas fa-eye text-blue-400 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="project-card group">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-400 transition">
+                                        <a href="https://github.com/Newchair2644/The-Adventures-of-RB" target="_blank" class="flex items-center">
+                                            The Adventures of R&B
+                                            <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-300 mb-3">Two player physics-based puzzle game made in Godot 3.5</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-green-900/50 text-green-300 rounded text-xs">Game Development</span>
+                                        <span class="px-2 py-1 bg-green-900/50 text-green-300 rounded text-xs">Godot</span>
+                                        <span class="px-2 py-1 bg-green-900/50 text-green-300 rounded text-xs">GDScript</span>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4 flex items-center justify-end mt-4 md:mt-0">
+                                    <div class="w-16 h-16 bg-green-400/10 rounded-full flex items-center justify-center group-hover:bg-green-400/20 transition">
+                                        <i class="fas fa-gamepad text-green-400 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card group">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-400 transition">
+                                        <a href="https://github.com/Newchair2644/void-packages" target="_blank" class="flex items-center">
+                                            Void Linux Package Maintainer
+                                            <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-300 mb-3">Currently maintaining a few package templates for Void Linux</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-purple-900/50 text-purple-300 rounded text-xs">Linux</span>
+                                        <span class="px-2 py-1 bg-purple-900/50 text-purple-300 rounded text-xs">Packaging</span>
+                                        <span class="px-2 py-1 bg-purple-900/50 text-purple-300 rounded text-xs">Bash</span>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4 flex items-center justify-end mt-4 md:mt-0">
+                                    <div class="w-16 h-16 bg-purple-400/10 rounded-full flex items-center justify-center group-hover:bg-purple-400/20 transition">
+                                        <i class="fas fa-terminal text-purple-400 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="project-card group">
+                            <div class="flex flex-col md:flex-row">
+                                <div class="md:w-3/4">
+                                    <h3 class="text-2xl font-bold mb-1 group-hover:text-blue-400 transition">
+                                        <a href="https://github.com/Newchair2644/coreutils" target="_blank" class="flex items-center">
+                                            Coreutils
+                                            <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                                        </a>
+                                    </h3>
+                                    <p class="text-gray-300 mb-3">Unix core utilities implemented from scratch in "modern" C99</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-yellow-900/50 text-yellow-300 rounded text-xs">C Programming</span>
+                                        <span class="px-2 py-1 bg-yellow-900/50 text-yellow-300 rounded text-xs">Unix</span>
+                                        <span class="px-2 py-1 bg-yellow-900/50 text-yellow-300 rounded text-xs">Systems Programming</span>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/4 flex items-center justify-end mt-4 md:mt-0">
+                                    <div class="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center group-hover:bg-yellow-400/20 transition">
+                                        <i class="fas fa-code text-yellow-400 text-2xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="card rounded-xl p-6 mt-8">
+                    <h2 class="text-3xl font-bold mb-6 glow">Skills & Technologies</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="flex items-center">
+                            <i class="fab fa-python text-blue-400 mr-2"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-terminal text-green-400 mr-2"></i>
+                            <span>Bash Scripting</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-js text-yellow-400 mr-2"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-code text-purple-400 mr-2"></i>
+                            <span>C/C++</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linux text-gray-400 mr-2"></i>
+                            <span>Linux Systems</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-network-wired text-red-400 mr-2"></i>
+                            <span>Networking</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-    <footer>
-        <div>
-            <span class="copyright"> &copy; Numair Dubas 2024</span>
-            <a rel="license noopener noreferrer" href="./LICENSE">LICENSE (GPL-v3)</a>
-            <span class="mobile-hide">/</span>
-            <a href="./atom.xml">Feed (atom)</a>
-        </div>
-        <div>
-            <a rel="me noopener noreferrer" href="https://tilde.zone/@Newchair">Mastodon</a>
-            <span class="mobile-hide">/</span>
-            <a href="mailto: Numair2644@proton.me" rel="noopener noreferrer">Contact</a>
-            <span class="mobile-hide">/</span>
-            <a href="assets/public-key.asc" rel="noopener noreferrer">PGP Public Key </a>
-        </div>
-    </footer>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-gray-700 text-center text-gray-400">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6">
+                <span>&copy; 2024 Numair Dubas</span>
+                <span class="hidden md:block">•</span>
+                <a href="./LICENSE" class="hover:text-blue-400 transition">GPL-v3 License</a>
+                <span class="hidden md:block">•</span>
+                <span>Made with <i class="fas fa-heart text-red-400"></i> and <i class="fas fa-coffee text-yellow-400"></i></span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Create particle background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = Math.floor(window.innerWidth / 10);
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                // Random size between 2px and 5px
+                const size = Math.random() * 3 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                particle.style.animation = `float ${duration}s infinite ease-in-out`;
+
+                particlesContainer.appendChild(particle);
+            }
+
+            // Add floating animation
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes float {
+                    0% {
+                        transform: translate(0, 0);
+                    }
+                    50% {
+                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);
+                    }
+                    100% {
+                        transform: translate(0, 0);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Typewriter effect
+        function typeWriter() {
+            const element = document.querySelector('.typewriter');
+            const text = element.textContent;
+            element.textContent = '';
+
+            let i = 0;
+            const speed = 100;
+
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+
+            type();
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            typeWriter();
+
+            // Add hover effect to project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.classList.add('shadow-lg');
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('shadow-lg');
+                });
+            });
+        });
+
+        // Make particles responsive
+        window.addEventListener('resize', () => {
+            const particlesContainer = document.getElementById('particles');
+            particlesContainer.innerHTML = '';
+            createParticles();
+        });
+    </script>
+</body>
 </html>
